@@ -1,8 +1,6 @@
 import { useState, useMemo } from 'react';
 
-import { Pagination } from './components/Pagination';
-import { Search } from './components/Search';
-import { Table } from './components/Table';
+import { Pagination, Search, Table } from './components';
 import { calculateTotalNumberOfPages, getRows } from './UsersList.utils';
 
 export const UsersList = ({ rowsData, rowsPerPage = 40 }) => {

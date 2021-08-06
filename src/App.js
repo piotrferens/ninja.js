@@ -1,6 +1,6 @@
-import { Layout } from './ui/layout/Layout';
-import { UsersList } from './ui/usersList/UsersList';
+import { Layout } from './ui/layout';
 import './App.css';
+import { UsersList } from './ui/usersList';
 import { usersData } from './usersData';
 
 const App = () => (

@@ -3,7 +3,7 @@ import chunk from 'lodash.chunk';
 export const calculateTotalNumberOfPages = ({ rowsLength, rowsPerPage }) =>
   rowsPerPage === 0 ? 0 : Math.ceil(rowsLength / rowsPerPage);
 
-const filterRow = ({ row, searchPhrase }) => {
+export const filterRow = ({ row, searchPhrase }) => {
   const searchPhraseLowerCase = searchPhrase.toLowerCase();
 
   return (
