@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
-import DataTable from './DataTable';
+import { Layout } from './ui/layout';
 import './App.css';
+import { UsersList } from './ui/usersList';
+import { usersData } from './usersData';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="container mt-3">
-        <DataTable rows={this.props.rows} locale="da" rowsPerPage={5} />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Layout>
+    <UsersList rowsData={usersData} rowsPerPage={5} />
+  </Layout>
+);
 
 export default App;
