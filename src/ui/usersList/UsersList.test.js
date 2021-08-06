@@ -1,8 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 
-import { userFactory } from '../usersData';
+import { userFactory } from '../../usersData';
 
-import DataTable from './DataTable';
+import { UsersList } from './UsersList';
 
 const mockedRows = [
   userFactory({
@@ -32,9 +32,9 @@ const mockedRows = [
   }),
 ];
 
-describe('DataTable', () => {
+describe('UsersList', () => {
   it('renders 5 rows', async () => {
-    const wrapper = render(<DataTable rows={mockedRows} locale="da" rowsPerPage={5} />);
+    const wrapper = render(<UsersList rowsData={mockedRows} rowsPerPage={5} />);
 
     const rows = wrapper.getAllByTestId('row');
 
@@ -42,7 +42,7 @@ describe('DataTable', () => {
   });
 
   it('filters rows based on input', () => {
-    const wrapper = render(<DataTable rows={mockedRows} locale="da" rowsPerPage={5} />);
+    const wrapper = render(<UsersList rowsData={mockedRows} rowsPerPage={5} />);
 
     const searchUsersInput = screen.getByTestId('search-users');
 
